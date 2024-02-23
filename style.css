@@ -7,24 +7,39 @@
 a{
     text-decoration: none;
 }
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+.nav-list li{
+    padding: 15px;
+}
+.logo{
+    left: 85%;
+}
 .indexpage{
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-position: relative;
+    color: #2b2929;
+    /* height: 100vh; */
+
+
+}
+.indextext{
+    position: absolute;
+    top: 40%;
+    padding-left: 20px;
+    text-align: justify;
 
 }
 .indextext h1{
-    position: absolute;
-    left: 10%;
-padding: 10px;
-
+    margin-bottom: 10px;
+    color: #043927;
 }
 .indeximg img{
 position: absolute;
-right: 20%;
-height: 50vh;
+right: 10%;
+height: 60vh;
 }
  
 
@@ -49,7 +64,7 @@ height: 50vh;
     color: #656060;
 }
 
-.form-box a{
+.form-box a, h2{
     color: #05543a;
 }
 .form-box a:hover{
@@ -61,7 +76,7 @@ height: 50vh;
 }
 .row input{
     background:#f0ebeb;
-    border: 2px solid #656060;
+    border: 2px solid #043927;
     border-radius: 8px;
     width: 100%;
     padding: 12px;
@@ -95,10 +110,6 @@ height: 50vh;
     align-items: center;
 
 }
-.upper-right{
-    right: 5%;
-    position: absolute;
-}
 .head{
     background: #fff;
     padding: 0 40px;
@@ -115,50 +126,47 @@ height: 50vh;
     position: absolute;
     right:5% ;
 }
-.mid{
-    background: #3f704d;
+.tail{
+    background:#f9fefc;
+    height: 70vh;
     padding: 30px;
-    margin:0 20px;
+}
+.mid{
+    background: #043927;
+    padding:  20px;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
     
 }
 .mid a{
-    color: #d0f0cd;
-}
-.tail{
-    background: #f4f9f5;
-    height: 80%;
-    padding: 30px;
+    color: #fff;
 }
 .profile{
     margin-top: 20px;
-   padding: 10px;
+    padding: 10px;
 }
 .view{
     display: flex;
     align-items: center;
-    padding: 0 10px;
-    margin: 10px 0;
+    margin: 20px;
 }
 .view a{
-    color: #1e7714;
+    color: #05543a;
     font-size: 13px;
 }
 .components{
     display: flex;
     align-items: center;
     background: #fff;
-    padding: 30px;
-    margin: 10px;
+    padding: 25px;
+    margin: 15px;
     position: relative;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 .left p{
-    color: #cec5c5;
+    color: #043927;
 }
 .right{
     position: absolute;
@@ -271,11 +279,10 @@ li{
     padding: 10px 30px; 
     margin-bottom: 10px;
     width: 100%;
-    background: #3f704d;
+    background: #14520d;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    /* color: #fff; */
     font-size: 15px;
 }
 .btn a{
@@ -284,11 +291,11 @@ li{
 .btn2{
     
     padding: 8px 30px; 
-    font-size: 18px;
-    background: #05543a;
-    border:1px solid #9dc183;
+    font-size: 15px;
+    background: #14520d;
+    border: none;
     border-radius: 10px;
-    margin-top: 50px;
+    margin: 30px 0px;
     cursor: pointer; 
 }
 .btn2 a{
@@ -298,9 +305,34 @@ li{
 background-color: #688553;
 color: #043927;
 }
+.btn3{
+    padding: 5px;
+    background: transparent;
+    border:1px solid #043927;
+    border-radius: 5px;
+    cursor: pointer;
 
-@media(max-width:900px){
+}
+.btn3:hover{
+    background: #1e7714;
+    color: #f0ebeb;
+}
+
+@media(max-width:767px){
     
+.logo{
+    left: 60%;
+}
+
+.indextext{
+    top: 60%;
+    padding: 0px 25px;
+}
+
+.indeximg img{
+    right: 10%;
+    height: 40vh;
+}
     .success{
         position: absolute;
         padding:30px 20px;
@@ -330,5 +362,50 @@ color: #043927;
 .anonymous-box{
     width: 70%;
 }
+}
+
+@media screen and (max-width:1024px) and (min-width:768px){
+    .logo{
+        left: 75%;
+    }
+    
+    .indextext{
+        top: 55%;
+        padding: 0px 70px;
+        
+    }
+    
+    .indeximg img{
+        right: 25%;
+        height: 40vh;
+    }
+        .success{
+            position: absolute;
+            padding:30px 20px;
+            width: 60%;
+        }
+        .components{
+            padding: 30px;
+            margin: 20px 0;
+        }  
+        .right{
+            right: 30px;
+        }
+        .profile{
+            padding: 5px;
+        }
+        .head-section-right{
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            right:8% ;
+    }
+    .form-box{
+        left: 10%;
+        padding: 10px 15px;
+        width: 80%;
+    }
+    .anonymous-box{
+        width: 70%;}
 }
 
