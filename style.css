@@ -244,9 +244,9 @@ height: 60vh;
 
 .input-text{
     height: auto;
-    min-width: 100%;
+    min-width: 80%;
     min-height: 30px;
-    padding: 0 30px;
+    padding: 0 10px;
     box-sizing: border-box;
     resize: none;
     overflow-y: auto;
@@ -254,15 +254,15 @@ height: 60vh;
     outline: none;
     /* border: 1px solid; */
 }
+.form input[type="file"]{
+    display: none;
+}
 
 .form label{
     display: inline-block;
     padding: 15px;
     cursor: pointer;
     
-}
-.form input[type="file"]{
-    display: none;
 }
 
 .btn-icon1{
