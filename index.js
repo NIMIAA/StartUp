@@ -24,32 +24,42 @@ const link = document.getElementById('link');
 // var text = document.getElementById('new-text').innerHTML
 
 
-let input = document.getElementById("inputTag");
-let fileInput = document.querySelector(".file-input");
-let imageName = document.getElementById("imageName");
+const input = document.getElementById('input-text');
 
-fileInput.addEventListener("click", function(){
-    input.click();
-});
+function autoExpand(){
+    // this.style.width = 'auto'
+    // this.style.width = input.scrollWidth + 'px'
+    input.style.height = 'auto';
+    input.style.height = input.scrollHeight + 'px'
+}
+input.addEventListener('input', autoExpand);
 
-input.addEventListener("change", function(){
-    let fileName = input.files[0].name;
-    fileInput.textContent = fileName;    
-});
+// let input = document.getElementById("inputTag");
+// let fileInput = document.querySelector(".file-input");
+// let imageName = document.getElementById("imageName");
 
-let inputText = document.querySelector("#inputText");
-let list = document.getElementById("list");
+// fileInput.addEventListener("click", function(){
+//     input.click();
+// });
 
-inputText.addEventListener("keyup", function(event){
-    if(event.key == "Enter"){
-        addItem(this.value);
-        this.value = "";
-    }
-});
+// input.addEventListener("change", function(){
+//     let fileName = input.files[0].name;
+//     fileInput.textContent = fileName;    
+// });
 
-let addItem = (inputText) => {
-    let listItem = document.createElement("li");
-    listItem.innerHTML = inputText;
+// let inputText = document.querySelector("#inputText");
+// let list = document.getElementById("list");
 
-    list.appendChild(listItem);
-};
+// inputText.addEventListener("keyup", function(event){
+//     if(event.key == "Enter"){
+//         addItem(this.value);
+//         this.value = "";
+//     }
+// });
+
+// let addItem = (inputText) => {
+//     let listItem = document.createElement("li");
+//     listItem.innerHTML = inputText;
+
+//     list.appendChild(listItem);
+// };
